@@ -1,5 +1,7 @@
-import image_e5f7ebbed953fb76250f27597b0dd2ac78327481 from 'figma:asset/e5f7ebbed953fb76250f27597b0dd2ac78327481.png';
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+
+const aboutImage = 
+  "https://media.licdn.com/dms/image/v2/D4D03AQEncxDgevFxXA/profile-displayphoto-crop_800_800/B4DZvb0ji6JsAI-/0/1768919551086?e=1770249600&v=beta&t=wx3EbHEh9At4u65bPSsdDDsVpnnXA3w4fI__UrL_G8Y";
 
 export function About() {
   return (
@@ -18,7 +20,7 @@ export function About() {
           <div className="relative">
             <div className="w-100 aspect-square rounded-full overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src={image_e5f7ebbed953fb76250f27597b0dd2ac78327481}
+                src={aboutImage}
                 alt="Professional workspace"
                 className="w-full h-full object-cover"
               />
