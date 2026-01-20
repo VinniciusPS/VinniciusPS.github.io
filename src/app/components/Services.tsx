@@ -1,5 +1,3 @@
-import image_a151008b64d394882d31ed15022c342b7ef90388 from 'figma:asset/a151008b64d394882d31ed15022c342b7ef90388.png';
-import image_e78c4bc42bed5fee2f0ddb5792292361b4b01686 from "figma:asset/e78c4bc42bed5fee2f0ddb5792292361b4b01686.png";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import { Smartphone, TrendingUp, Database, Activity } from "lucide-react";
 
@@ -12,7 +10,7 @@ export function Services() {
       description:
         "Aplicativos analíticos customizados para otimizar suas decisões estratégicas.",
       image:
-        image_a151008b64d394882d31ed15022c342b7ef90388,
+        "https://images.pexels.com/photos/17781649/pexels-photo-17781649.jpeg",
       features: [
         "Simulador de demanda em tempo real",
         "Alerta de variação de preços",
@@ -41,7 +39,7 @@ export function Services() {
       title: "Integrações de Dados",
       description:
         "Pipeline de dados robusto que integram múltiplos registros em uma única fonte de verdade.",
-      image: image_e78c4bc42bed5fee2f0ddb5792292361b4b01686,
+      image: "https://images.pexels.com/photos/17781649/pexels-photo-17781649.jpeg",
       features: [
         "Automação de coleta e limpeza de dados",
         "Combinação de múltiplas fontes de dados, como Whatsapp, GoogleSheets, Hubspot e outros.",
