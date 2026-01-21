@@ -1,3 +1,5 @@
+import image_a151008b64d394882d31ed15022c342b7ef90388 from 'figma:asset/a151008b64d394882d31ed15022c342b7ef90388.png';
+import image_e78c4bc42bed5fee2f0ddb5792292361b4b01686 from "figma:asset/e78c4bc42bed5fee2f0ddb5792292361b4b01686.png";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import { Smartphone, TrendingUp, Database, Activity } from "lucide-react";
 
@@ -64,58 +66,57 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900"
+      className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-slate-900"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl mb-4 text-cyan-400">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4 text-cyan-400">
             Serviços
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            Soluções completas de dados para impulsionar o
-            crescimento do seu negócio
+          <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto px-4">
+            Soluções completas de dados para impulsionar o crescimento do seu negócio
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-cyan-500/10 hover:shadow-2xl transition-shadow border border-slate-700"
+              className="bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-cyan-500/20 hover:shadow-2xl transition-all border border-slate-700 hover:border-cyan-500/50 flex flex-col"
             >
-              <div className="aspect-video relative overflow-hidden">
+              <div className="aspect-video relative overflow-hidden bg-slate-700">
                 <ImageWithFallback
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
                 {service.id === 3 && (
                   <div className="absolute top-0 left-0 right-0 h-12 bg-[#f5f5f5]" />
                 )}
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-cyan-500/10 rounded-lg">
+              <div className="p-5 sm:p-6 flex flex-col flex-1">
+                <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                  <div className="p-2 bg-cyan-500/10 rounded-lg flex-shrink-0">
                     <service.icon
                       className="text-cyan-400"
-                      size={24}
+                      size={20}
                     />
                   </div>
-                  <h3 className="text-2xl text-slate-100">{service.title}</h3>
+                  <h3 className="text-lg sm:text-xl text-slate-100 leading-tight">{service.title}</h3>
                 </div>
-                <p className="text-slate-300 mb-4">
+                <p className="text-sm sm:text-base text-slate-300 mb-4 leading-relaxed">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mt-auto">
                   {service.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-2 text-sm text-slate-300"
+                      className="flex items-start gap-2 text-xs sm:text-sm text-slate-300"
                     >
-                      <span className="text-cyan-400 mt-1">
+                      <span className="text-cyan-400 mt-0.5 flex-shrink-0">
                         ✓
                       </span>
-                      <span>{feature}</span>
+                      <span className="leading-snug">{feature}</span>
                     </li>
                   ))}
                 </ul>
